@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+    <title>MakeOwnBook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="deletebox">
+            <div class="deletename">
+                <p>You Want Delete '{{pagename.title}}' Page ?</p>
+            </div>
+            <div class="deletebtn">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+                <div class="cancelbtn">
+                    <span><a href="{% url 'basePage' %}">Back</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

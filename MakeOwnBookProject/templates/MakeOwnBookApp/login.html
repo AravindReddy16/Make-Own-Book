@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>MakeOwnBook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="loginbox">
+            <div class="title">
+                <p>Login</p>
+            </div>
+            <div class="details">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="text" placeholder="UserName"  name="username" required>
+                    <input type="password" placeholder="Password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="more">
+                <div class="messages">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="forgot">
+                    <a href="{% url 'password_reset' %}">Forgot Password ?</a>
+                </div>
+                <div class="register">
+                    <a href="{% url 'register' %}">Register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

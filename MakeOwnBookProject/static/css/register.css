@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://wallpapercave.com/wp/s6UOGWi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registerbox {
+    width: 50%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.329);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 3%;
+}
+.title {
+    width: 100%;
+    height: 10%;
+    display: grid;
+    place-content: center;
+    font-size: 40px;
+}
+.details {
+    width: 100%;
+    height: 70%;
+}
+form {
+    width: 100%;
+    height: 100%;
+}
+.upper {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.upper input {
+    width: 48%;
+    height: 70%;
+    padding: 0px 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+}
+.lower {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.lower input {
+    width: 100%;
+    height: 18%;
+    padding: 0px 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+}
+input:focus {
+    background-color: white;
+}
+.lower button {
+    width: 100%;
+    height: 18%;
+    border: none;
+    background-color: green;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: rgb(3, 86, 3);
+}
+.more {
+    width: 100%;
+    height: 20%;
+}
+.messages {
+    width: 100%;
+    height: 50%;
+    font-size: 25px;
+    text-align: center;
+    color: red;
+}
+.login {
+    width: 100%;
+    height: 50%;
+    background-color: blue;
+    display: grid;
+    place-content: center;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.login a {
+    text-decoration: none;
+    color: white;
+}
+.login:hover {
+    background-color: rgb(4, 4, 142);
+}

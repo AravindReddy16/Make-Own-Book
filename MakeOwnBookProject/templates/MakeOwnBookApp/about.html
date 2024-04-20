@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MakeOwnBook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="thankingbox">
+            <div class="homebtn">
+                <a href="{% url 'basePage' %}"><i class="fa-solid fa-house-chimney"></i></a>
+            </div>
+            <div class="content">
+                <p><b>Welcome</b> to MakeOwnBook, We are glad to you for becoming a member in our Community. Dear <b>{{details.username}}</b> of Email <b>({{details.email}})</b> with <b>{{pagecount}}</b> Pages on the Name of <b>{{book.name}}</b> is shared a Important part in our Community.</p>
+            </div>
+            <div class="thanks">
+                <p>Thank You !</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

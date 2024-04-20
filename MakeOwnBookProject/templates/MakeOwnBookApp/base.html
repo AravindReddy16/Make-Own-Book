@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MakeOwnBook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navlogo">
+                <a href="{% url 'aboutPage' %}">{{book.name}}</a>
+            </div>
+            <div class="navinfo">
+                <div class="subinfo"><a href="{% url 'newPage' %}">New <i class="fa-solid fa-floppy-disk"></i></a></div>
+                <div class="subinfo"><a href="{% url 'logout' %}">Logout <i class="fa-solid fa-right-from-bracket"></i></a></div>
+            </div>
+        </div>
+        <div class="body">
+            {% if pages %}
+                <div class="pages">
+                    {% for page in pages %}
+                        <div class="page">
+                            <div class="pagename">
+                                <p><a href="{% url 'mainPage' page.id %}">{{page.title}}</a></p>
+                            </div>
+                            <div class="pagedate">
+                                <span>{{page.date}}</span>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <div class="nopages">
+                    <p>No Pages Yet !</p>
+                </div>
+            {% endif %}
+            {% block bodyContent %}
+                <div class="notselect">
+                    <p>Find Your Pages !</p>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

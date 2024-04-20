@@ -1,0 +1,25 @@
+{% extends 'MakeOwnBookApp/base.html' %}
+{% load static %}
+{% block bodyContent %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <div class="content">
+        <div class="titlebar">
+            <div class="namebar">
+                <div class="titlename">
+                    <p>{{pageno.title}}</p>
+                </div>
+            </div>
+            <div class="datebox">
+                <div class="datebar">
+                    <span>{{pageno.date}}</span>
+                </div>
+                <div class="deletebar">
+                    <span><a href="{% url 'deletePage' pageno.id %}"><i class="fa-solid fa-trash"></i></a></span>
+                </div>
+            </div>
+        </div>
+        <div class="storybar">
+            <p>{{pageno.story}}</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://wallpapercave.com/wp/s6UOGWi.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2%;
+}
+.navbar {
+    width: 100%;
+    height: 8%;
+    background-color: rgba(255, 255, 255, 0.329);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    margin-bottom: 1.5%;
+}
+.navbar a {
+    text-decoration: none;
+}
+.navlogo {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.navlogo a {
+    color: black;
+}
+.navinfo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.navinfo a {
+    color: black;
+}
+.subinfo {
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.subinfo:hover {
+    background-color: white;
+}
+.body {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.pages {
+    width: 25%;
+    height: 100%;
+    overflow: auto;
+}
+.pages::-webkit-scrollbar {
+    display: none;
+}
+.nopages {
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 40px;
+    cursor: default;
+}
+.page {
+    width: 100%;
+    height: 12%;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 3% 7%;
+    margin-bottom: 4%;
+    cursor: pointer;
+}
+.page:hover {
+    background-color: white;
+}
+.pagename {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    overflow: auto;
+    text-wrap: nowrap;
+}
+.pagename a {
+    text-decoration: none;
+    color: black;
+}
+.pagename::-webkit-scrollbar {
+    display: none;
+}
+.pagedate {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+}
+.notselect {
+    width: 72%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    font-size: 40px;
+}

@@ -1,0 +1,26 @@
+{% extends 'MakeOwnBookApp/base.html' %}
+{% load static %}
+{% block bodyContent %}
+    <link rel="stylesheet" href="{% static 'css/new.css' %}">
+    <div class="content">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="titlebar">
+                <div class="titleinput">
+                    <input type="text" placeholder="Title" name="newtitle" required>
+                </div>
+                <div class="savebox">
+                    <div class="save">
+                        <button type="submit"><i class="fa-solid fa-floppy-disk"></i></button></span>
+                    </div>
+                    <div class="delete">
+                        <span><a href="{% url 'basePage' %}"><i class="fa-solid fa-trash"></i></a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="storybar">
+                <textarea cols="30" rows="10" placeholder="Story" name="newstory" required></textarea>
+            </div>
+        </form>
+    </div>
+{% endblock %}

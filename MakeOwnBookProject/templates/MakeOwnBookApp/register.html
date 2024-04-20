@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <title>MakeOwnBook</title>
+</head>
+<body>
+    <div class="container">
+        <div class="registerbox">
+            <div class="title">
+                <p>Registration</p>
+            </div>
+            <div class="details">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="upper">
+                        <input type="text" placeholder="UserName" name="username" required>
+                        <input type="text" placeholder="BookName" name="bookname" required>
+                    </div>
+                    <div class="lower">
+                        <input type="email" placeholder="Email" name="email" required>
+                        <input type="password" placeholder="Password" name="password1" required>
+                        <input type="password" placeholder="Confirm Password" name="password2" required>
+                        <button type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="more">
+                <div class="messages">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="login">
+                    <a href="{% url 'login' %}">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+.content {
+    width: 72%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.titlebar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.titleinput {
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+}
+.titleinput input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    padding: 0px 30px;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+    outline: none;
+}
+.titleinput input::placeholder {
+    color: black;
+}
+.titleinput input:focus {
+    background-color: white;
+}
+.savebox {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.save {
+    width: 6rem;
+    height: 100%;
+    border-radius: 10px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.save button:hover {
+    background-color: rgb(1, 100, 1);
+}
+.save button {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.delete {
+    width: 6rem;
+    height: 100%;
+    border-radius: 10px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+.delete:hover {
+    background-color: rgb(154, 4, 4);
+}
+.delete a {
+    text-decoration: none;
+    color: white;
+}
+.storybar {
+    width: 100%;
+    height: 87%;
+}
+.storybar textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    padding: 2%;
+    font-size: 20px;
+    font-weight: 300px;
+    text-indent: 50px;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 6px;
+    line-height: 27px;
+    background-color: rgba(255, 255, 255, 0.329);
+    backdrop-filter: blur(10px);
+}
+.storybar textarea::placeholder {
+    color: black;
+}
+.storybar textarea::selection {
+    background-color: yellow;
+}
+.storybar textarea::-webkit-scrollbar {
+    display: none;
+}
+.storybar textarea:focus {
+    background-color: white;
+}
